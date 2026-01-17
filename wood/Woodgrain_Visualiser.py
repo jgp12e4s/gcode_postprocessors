@@ -7,7 +7,10 @@ import matplotlib.pyplot as plt
 # ============================================================
 
 # Path to G-code file
-GCODE_FILE = """gcode_file.gcode"""
+GCODE_FILE = input("""Input the name of the gcode file (in the form path/gcode_file.gcode): """)
+COLOURMAP = "copper_r"
+# COLOURMAP = "bwr"
+
 
 # Height range (for display)
 TOTAL_HEIGHT_MM = None  # None = auto-detect from gcode
@@ -16,8 +19,7 @@ TOTAL_HEIGHT_MM = None  # None = auto-detect from gcode
 # If None, auto-detect from G-Code layer changes
 LAYER_HEIGHT_MM = None
 
-COLOURMAP = "copper_r"
-# COLOURMAP = "bwr"
+
 
 # ============================================================
 # ==================== GCODE PARSING ============================
