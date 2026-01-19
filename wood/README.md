@@ -32,10 +32,13 @@ The settings will take some playing around with for your filament, printer and m
 
 
 # **Woodgrain_Visualiser.py**
-My own visualisiton program to see what ```Woodgrain_Visualiser.py``` has done to the layers. Run the python code and input the name of the gcode file after you've used the Woodgrain Effect plugin. It will create a colourmap which shows the temperature of each layer, by default the colourmap used is ```"copper_r"``` which is the best representation I've found of what the print should come out as in terms of wood colour, if you want to see it as temperature variation swap to ```COLOURMAP="bwr"```
+My own visualisiton program to see what ```Woodgrain_Visualiser.py``` has done to the layers. Run the python code and input the name of the gcode file after you've used the Woodgrain Effect plugin. It will create a colourmap which shows the temperature of each layer, by default the colourmap used is ```"copper_r"``` which is the best representation I've found of what the print should come out as in terms of wood colour (although exaggerated), if you want to see it as temperature variation swap to ```COLOURMAP="bwr"``` (remember hot temps are slow speeds and vice versa). The graph below shows an example of the Visualiser graph using the default settings looks pretty decent as a woodgrain approximation. 
+
+<img width="1920" height="967" alt="Visualiser" src="https://github.com/user-attachments/assets/9c83e382-6661-45ad-b87b-af750de92266" />
 
 
-### Ascii art curve
+
+# Ascii art curve
 
 MoonCactus added a vertical ascii-art "curve" at the end of the file, such as the excerpt show below.
 It shows the variations of temperature according to the Z height, so you can get an idea of the effect of the parameters without having to print the object.
