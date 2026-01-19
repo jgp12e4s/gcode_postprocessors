@@ -30,12 +30,10 @@ The parameters and their defaults are:
 
 The settings will take some playing around with for your filament, printer and model, I reccomend starting with the defaults (at least if using wood PLA). For best results for the woodgrain keep ```Max temperature change per layer``` at around 1/4 of ```Temperature variation``` at least for ```Average wood grain size``` near the default. A higher woodgrain size where it changes more slowly would allow for a lower max change per layer and give a smoother transition. The spikiness I've not particularly played with but increase it for fewer, sharper dark (hot & slow) bands of layers. ```Woodgrain seed``` is simply the exact seed value of the Perlin noise, change it for different grains. You can visualise the woodgrain by using the code below
 
--
 
 # **Woodgrain_Visualiser.py**
 My own visualisiton program to see what ```Woodgrain_Visualiser.py``` has done to the layers. Run the python code and input the name of the gcode file after you've used the Woodgrain Effect plugin. It will create a colourmap which shows the temperature of each layer, by default the colourmap used is ```"copper_r"``` which is the best representation I've found of what the print should come out as in terms of wood colour, if you want to see it as temperature variation swap to ```COLOURMAP="bwr"```
 
--
 
 ### Ascii art curve
 
