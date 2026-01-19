@@ -1,6 +1,6 @@
 # **Woodgrain_Cura.py**
 
-Adapted from (https://github.com/MoonCactus/gcode_postprocessors/tree/master/wood) the Woodgrain plugin for Cura post processes the gcode to change the temperature profile (and therefore) colour of each layer to give horizontal texturing so that it looks like wood. I have added extra functionality to the original, including more advanced smoothing prevent bad "seed" woodgrains, a fixed raft temperature (for negative layer numbers) and a few other extra/simplified controls.
+Adapted from (https://github.com/MoonCactus/gcode_postprocessors/tree/master/wood) the Woodgrain plugin for Cura post processes the gcode to change the temperature profile (and therefore colour) of each layer to give horizontal texturing by burning the wood to give the woodgrain effect. Now added is a corresponding change to the print speed of the walls (low temperature-high speed & high temperature-low speed), lower print speed means the filament stays in the nozzle longer and so burns more and a higher print speed reduces any burning at low temperatures. I have also some minor extra functionality to the original, including more advanced smoothing prevent bad "seed" woodgrains, a fixed raft temperature (for negative layer numbers) and a few other extra/simplified controls.
 
 ## **To use as a plugin for Cura**
 (Working on Cura 5.11.0)
@@ -18,9 +18,11 @@ Adapted from (https://github.com/MoonCactus/gcode_postprocessors/tree/master/woo
 The parameters and their defaults are:
 
 * ```Average temperature``` - Baseline print temperature (default: 210 degree C)
-* ```Temperature variation``` - Variation above and below average (default: 5 degree C)
-* ```Max temperature change per layer``` - The maximum temperature change between two layers (default: 2 degree C)
+* ```Temperature variation``` - Variation above and below average (default: 20 degree C)
+* ```Max temperature change per layer``` - The maximum temperature change between two layers (default: 2.5 degree C)
 * ```Raft temperature``` - The temperature of any negative layers (default: 210 degree C)
+* ```Average print speeds of walls``` - Baseline print speed of walls (default: 60 mm/s)
+* ```Print speed variation``` - Variation above and below average (default 20 mm/s)
 * ```Average wood grain size``` - The size of the wood grain, worth playing around with (default: 2 mm)
 * ```Spikiness``` - Relates to the frequency of high temperature bands (default: 1)
 * ```Woodgrain seed``` - The seed value of the Perlin noise, change for different woodgrain (default: 42)
