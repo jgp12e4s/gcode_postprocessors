@@ -437,6 +437,7 @@ class Woodgrain_Cura(Script):
         postponedTempLast = None
         skip_lines = 0
         total_length = len(lines) - 1
+        layer_temp = avgTemp
         for index, line in enumerate(lines):
 
             self._locks["metadata"].acquire()
@@ -451,7 +452,6 @@ class Woodgrain_Cura(Script):
                     f.write("M109 S" + str(raftTemp) + eol)
                 continue
 
-            layer_temp = avgTemp
             if "; set extruder " in line.lower():
                 f.write(line)
                 f.write(warmingTempCommands)
